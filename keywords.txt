@@ -56,3 +56,7 @@ set_gateway	KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################
+
+EthernetHardwareStatus	LITERAL1
+EthernetNoHardware	LITERAL1
+EthernetENC28J60	LITERAL1
