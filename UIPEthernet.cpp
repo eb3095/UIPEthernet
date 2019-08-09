@@ -167,6 +167,14 @@ EthernetLinkStatus UIPEthernetClass::linkStatus()
   return Enc28J60.linkStatus() ? LinkON : LinkOFF;
 }
 
+EthernetHardwareStatus EthernetClass::hardwareStatus()
+{
+	switch (Enc28J60.getChip()) {
+		case 100: return EthernetENC28J60;
+		default: return EthernetNoHardware;
+	}
+}
+
 IPAddress UIPEthernetClass::localIP()
 {
   #if ACTLOGLEVEL>=LOG_DEBUG_V3
